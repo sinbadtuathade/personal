@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Idul Fitri Saifuddin & Keluarga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            /* Tambahkan deklarasi untuk latar belakang */
+            background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.tAhzvYpUCC-spUdIT2f7WgHaEK%26pid%3DApi&f=1&ipt=d4a846efc9f13c3ed66075557898267f447a48718ad2bd914e00415124a684c7&ipo=images');
+            /* Ganti 'idul fitri 2.jpg' dengan URL gambar latar belakang yang Anda inginkan */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* Membuat latar belakang tetap saat menggulir */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 100, 0, 0.5);
+            /* Ubah opacity menjadi 0.5 */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: white;
+            animation: fadeIn 1s ease-out;
+            /* Tambahkan animasi fadeIn */
+        }
+
+        p {
+            color: white;
+            animation: slideIn 1s ease-out, fadeIn 1s ease-out;
+            /* Tambahkan animasi slideIn dan fadeIn */
+            animation-delay: 0.5s;
+            /* Tambahkan delay untuk animasi slideIn */
+        }
+
+        .container>p:nth-child(odd) {
+            animation: slideIn 1s ease-out, fadeIn 1s ease-out;
+            /* Tambahkan animasi slideIn dan fadeIn untuk paragraf dengan indeks ganjil */
+            animation-delay: 1s;
+            /* Tambahkan delay untuk animasi slideIn dan fadeIn */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Selamat Hari Raya Idul Fitri</h1>
+        <p>Assalamu'alaikum warahmatullahi wabarakatuh</p>
+        <p id="greeting"></p>
+        <p>Mohon maaf lahir dan batin atas segala kesalahan.</p>
+        <p>Terima kasih atas segala kebaikan dan doa yang telah diberikan.</p>
+        <p>“Mohon maaf lahir dan batin”</p>
+        <p>Taqabbalallahu minna wa minkum. Semoga Allah menerima amalan kita dan memberkahi kita semua.</p>
+        <p>Tetap jaga kesehatan dan keselamatan.</p>
+        <p>Salam hangat,</p>
+        <p>Muhammad Saifuddin & Keluarga</p>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan prompt nama pengguna saat pertama kali mengunjungi situs
+        function promptUsername() {
+            var userName = prompt("Masukkan nama Anda:");
+            if (userName !== null && userName !== "") {
+                // Mengubah huruf pertama menjadi kapital
+                userName = userName.charAt(0).toUpperCase() + userName.slice(1);
+                return userName;
+            } else {
+                // Jika pengguna membatalkan atau tidak memasukkan nama, panggil kembali fungsi untuk menampilkan prompt kembali
+                return promptUsername();
+            }
+        }
+
+        // Panggil fungsi promptUsername saat pertama kali situs dimuat
+        var userName = promptUsername();
+
+        // Ubah pesan salam di dalam paragraf
+        document.getElementById("greeting").innerHTML = "Halo <strong>" + userName + "</strong>, Saifuddin & Keluarga mengucapkan selamat Hari Raya Idul Fitri 1445 H.";
+    </script>
+</body>
+
+</html>
